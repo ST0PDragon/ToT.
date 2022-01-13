@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+  	<meta charset = "Utf-8" />
+  	<meta name ="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Tasty or Tasteless</title>
+  	
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <!-- 부트스트랩 CSS 추가하기 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- 커스텀 CSS 추가하기 -->
+    <link rel="stylesheet" href="./css/custom.css">
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="index.jsp">Tasty Or Tasteless</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbar">
+			<ul class="navbar-nav mr-auto">
+			<li class="nav-item active"><a class="nav-link"
+					href="home.html">메 인</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="index.jsp">나의 맛집 추천</a></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" id="dropdown"
+					data-toggle="dropdown"> 회원 관리 </a>
+					<div class="dropdown-menu" aria-labelledby="dropdown">
+<%
+	if(userID == null) {
+%>
+						<a class="dropdown-item" href="userLogin.jsp">로그인</a> 
+						<a class="dropdown-item" href="userRegister.jsp">회원가입</a> 
+<%
+	} else {
+%>
+						<a class="dropdown-item" href="userLogout.jsp">로그아웃</a>
+<%
+	}
+%>
+					</div>
+				</li>
+			</ul>
+			<form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
+				<input type="text" name="search" class="form-control mr-sm-2" placeholder="내용을 입력하세요.">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+			</form>
+		</div>
+	</nav>
+    <div class="wrap">
+      <div class="intro_bg">
+      
+            <div class="header" id ="link_header" >
+          </div>
+          <ul class="nav">
+            <li><a href="home.html">HOME</a></li>
+             
+	 <li><a href="#link_main_text3">TOT</a></li>
+	  <li><a href="#link_main_text2">정 보</a></li>
+            <li><a href="#link_main_text1">what TOT</a></li>
+            <li> <a class="btn btn-sm btn-outline-secondary" href="#" 
+	onClick="window.open('http://localhost:8888/ToT/index.jsp', '_blank')">나의 맛집 추천</a></li>
+            
+          </ul>
+        </div>
+        <div class="intro_text" id="link_main_text3">
+          <h1>TOT</h1>
+          <h4 class="contents1">Tasty Or Tasteless 맛있거나 맛없거나 둘 중 하나 선택하세요.</h4>
+        </div>
+      </div>
+      </div>
+      <!-- intro end-->
+    
+
+      <div class="main_text0" id="link_main_text2">
+        <h1>맛집</h1>
+        <div class="contents1">우리는 같은 맛집이어도 정확한 평가를 합니다.</div>
+        
+        <ul class="icons">
+          <li>
+            <div class="icon_img">
+              <img src="image/icon2.svg">
+            </div>
+            <div class="contents1_bold" >맛집 소개</div>
+            <div class="contents2">
+                방대한 빅데이터 자료를 통해 맛집을 소개합니다.
+            </div>
+            
+          </li>
+
+          <li>
+            <div class="icon_img">
+              <img src="image/icon0.svg">
+            </div>
+            <div class="contents1_bold">정확한 위치 기반 서비스</div>
+            <div class="contents2">
+             정확한 위치 기반 서비스로 고객님 근처에 있는 맛집을 소개합니다.
+            </div>
+           
+          </li>
+
+          <li>
+            <div class="icon_img">
+              <img src="image/icon1.svg">
+            </div>
+            <div class="contents1_bold">정확한 후기</div>
+            <div class="contents2">
+                고객님이 직접 등록하신 후기로 더 정확하게 맛집을 평가하실 수 있습니다.
+            </div>
+            
+          </li>
+        </ul>
+      </div>
+
+      <div class="main_text1" id="link_main_text1">
+        <h1>WHAT's TOT?</h1>
+        <div class="contents1">저희 TOT는 Tasty Or Tasteless의 약자로 
+        					   '맛있거나 맛없거나'라는 형용사 표현입니다.<br>
+        					   그만큼 저희 사이트를 이용해주시는<br>
+        					   고객님들께 보다 더 정확한 맛집 평가를 알려드리기 위해<br>
+							   의미 있는 이름으로 런칭하였으므로,많은 이용 부탁드리겠습니다.<br>        					  
+        </div>
+        <div class="service">
+          <div class="food_photo">
+            <img src="image/food.png">
+          </div>
+          <div class="contents2">
+              <h2>여기가 맛집이야? 그냥 평범한데?</h2>
+              많은 분들은 맛집이라고 하면 어떤 것도 다 맛있는 음식점이라고 생각할거예요 <br>
+              하지만 맛집이라고 해서 다 맛집은 아닙니다. <br>
+              맛으로 승부 보는 맛집이 아닌 뷰 맛집 , 서비스 맛집 , 친절 맛집 등등 <br>
+              여러 분류,여러 특성을 가진 맛집이 많아졌죠.  <br><br>
+              저희 TOT에서는 네이버 MAP API 데이터 기반으로 한 정확한 위치 기반 서비스와 <br>
+              MY SQL 빅데이터를 통해 방대한 데이터량으로 고객님들 후기,별점 하나하나씩   <br>
+              귀 기울일것이며,맛집의 기준을 높혀 최고의 맛집을 선택할 수 있도록 하겠습니다. <br><br>
+              
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="main_text2">
+        <ul>
+          <li>
+            <div><h1>CONTACT</h1></div>
+            <div>우리에게 파트너십을 신청하거나, 고객이 되어주세요</div>
+        
+          </li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="footer">
+        <div>Tasty Or Tasteless</div>
+        <div>
+          대표 <br>
+          정지용
+          배장호<br>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
